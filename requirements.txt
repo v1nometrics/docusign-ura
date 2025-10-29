@@ -1,0 +1,6 @@
+boto3>=1.34.0
+docusign-esign>=5.4.0
+python-dotenv>=1.0.0
+requests>=2.31.0
+gspread>=5.10.0
+oauth2client>=4.1.3
