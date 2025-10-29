@@ -1,0 +1,17 @@
+# Exemplo de configuração Terraform
+# Copie este arquivo para terraform.tfvars e ajuste os valores
+
+# Região AWS
+aws_region = "us-east-1"
+
+# Nome do projeto
+project_name = "contrato-assinatura"
+
+# Ambiente
+environment = "dev"
+
+# Bucket S3 existente para contratos
+s3_bucket_name = "template-trigger-docusign"
+
+# API Key do ManyChat (obtenha no painel ManyChat)
+manychat_api_key = "your_manychat_api_key_here"
