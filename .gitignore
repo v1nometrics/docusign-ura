@@ -1,8 +1,19 @@
+# Arquivos de configuração com credenciais
+config.env
+
+# Arquivos de teste que usam credenciais AWS
+test_docusign_webhook.py
+test_lambda_webhook.py
+
+# Arquivos de exemplo de webhook
+test_webhook.json
+test_webhook_example.json
+
 # Python
 __pycache__/
-*.py[cod]
-*$py.class
-*.so
+*.pyc
+*.pyo
+*.pyd
 .Python
 build/
 develop-eggs/
@@ -25,10 +36,6 @@ MANIFEST
 *.manifest
 *.spec
 
-# Installer logs
-pip-log.txt
-pip-delete-this-directory.txt
-
 # Unit test / coverage reports
 htmlcov/
 .tox/
@@ -41,41 +48,7 @@ coverage.xml
 .hypothesis/
 .pytest_cache/
 
-# Translations
-*.mo
-*.pot
-
-# Django stuff:
-*.log
-local_settings.py
-db.sqlite3
-
-# Flask stuff:
-instance/
-.webassets-cache
-
-# Scrapy stuff:
-.scrapy
-
-# Sphinx documentation
-docs/_build/
-
-# PyBuilder
-target/
-
-# Jupyter Notebook
-.ipynb_checkpoints
-
-# pyenv
-.python-version
-
-# celery beat schedule file
-celerybeat-schedule
-
-# SageMath parsed files
-*.sage.py
-
-# Environments
+# Virtual environments
 .env
 .venv
 env/
@@ -83,28 +56,6 @@ venv/
 ENV/
 env.bak/
 venv.bak/
-
-# Spyder project settings
-.spyderproject
-.spyproject
-
-# Rope project settings
-.ropeproject
-
-# mkdocs documentation
-/site
-
-# mypy
-.mypy_cache/
-.dmypy.json
-dmypy.json
-
-# AWS
-.aws/
-terraform.tfstate
-terraform.tfstate.backup
-.terraform/
-*.tfvars
 
 # IDE
 .vscode/
@@ -126,41 +77,14 @@ Thumbs.db
 *.log
 logs/
 
-# Configurações sensíveis
-config.env
-private.key
-*.key
-*.pem
-service-account-key.json
+# AWS
+.aws/
 
-# Arquivos temporários
-tmp/
-temp/
-*.tmp
-
-# Docker
-.dockerignore
-
-# Lambda packages
-lambda_packages/
-lambda_layers/
-
-# Node.js (caso haja algum)
-node_modules/
-npm-debug.log*
-
-# Arquivos específicos do projeto que não devem subir
-config.env
-private.key
-*.p12
-*.pfx
-
-# Terraform state files
+# Terraform
 *.tfstate
 *.tfstate.backup
+.terraform/
 
-# AWS SAM
-.sam/
-
-# CloudFormation
-*.template
+# Chaves privadas
+*.key
+*.pem

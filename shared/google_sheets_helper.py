@@ -39,11 +39,18 @@ class GoogleSheetsHelper:
         try:
             logger.info("Connecting to Google Sheets...")
 
-            # Configurar credenciais AWS diretamente para garantir acesso ao S3
+            # Configurar credenciais AWS das variáveis de ambiente
+            aws_access_key_id = os.getenv('AWS_ACCESS_KEY_ID')
+            aws_secret_access_key = os.getenv('AWS_SECRET_ACCESS_KEY')
+            aws_region = os.getenv('AWS_REGION', 'us-east-1')
+
+            if not aws_access_key_id or not aws_secret_access_key:
+                raise ValueError("AWS credentials not found in environment variables. Set AWS_ACCESS_KEY_ID and AWS_SECRET_ACCESS_KEY")
+
             boto3.setup_default_session(
-                aws_access_key_id='REMOVED_ACCESS_KEY',
-                aws_secret_access_key='REMOVED_SECRET_KEY',
-                region_name='us-east-1'
+                aws_access_key_id=aws_access_key_id,
+                aws_secret_access_key=aws_secret_access_key,
+                region_name=aws_region
             )
 
             # Conectar ao S3 para obter credenciais (usando método compatível com código anterior)
