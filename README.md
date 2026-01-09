@@ -577,17 +577,9 @@ aws logs filter-log-events \
 | **S3** | $0.02-0.10 | Por GB armazenado |
 | **CloudWatch** | $0.30 | Por GB logs |
 | **Total Estimado** | **$3.52-5.90** | Para uso moderado (100 contratos/mês) |
-
-## 📞 Suporte
-
-Para suporte técnico:
-- 📧 **Email**: suporte@innovatismc.com
-- 📋 **Documentação**: Este README completo
-- 🔍 **Logs**: CloudWatch para debugging avançado
-- 🧪 **Testes**: `test_lambda_webhook.py` para validação
-
 ---
 
 **🎉 Sistema pronto para automatizar seus contratos digitais!**
 
 > **Próximos passos:** Faça o deploy, teste com um contrato real e veja a magia acontecer! ✨
+
